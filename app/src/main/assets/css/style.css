@@ -1,0 +1,112 @@
+*{
+	user-select: none;
+	border-collapse: collapse;
+	border:0px;
+	padding: 0px;
+	margin: 0px;
+    font-family: "Arial";
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	/*font-size: 8vmin;*/
+	font-size: 25px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body, html{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#timeCounterContainer{
+	width: 80%;
+	margin-left: 10%;
+	padding-top: 20%;
+	font-size: 15vmin;
+	text-align: center;
+	font-family: digit;
+}
+
+#moneyCounterContainer{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 20%;
+	font-size: 7vmin;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+
+}
+
+#logoContainer{
+	width: 80%;
+	margin-top: 20%;
+	margin-left: 10%;
+	font-family: "GreatVibes";
+	font-size: 18vmin;
+}
+
+
+/*============ COMPTEUR ============*/
+#imgJackpot{
+	width: 100%;
+}
+
+#counter{
+    position: absolute;
+    top: 0;
+}
+
+.counter_item{
+	height: inherit;
+	width: 60px;
+	margin-left: 1px;
+}
+
+.digit {
+	height: inherit;
+	width: inherit;
+    /*height: 1500px;
+	width: 60px;
+    background-size: auto 1800px;
+    background-position: center -150px;*/
+    background-image: url('../img/counter_digits.png');
+    background-repeat: no-repeat;
+    background-size: 60px 1800px;
+
+    transition: background-position 500ms;
+}
+
+.front{
+	height: inherit;
+	width: inherit;
+	/*height: 150px;
+	width: 60px;*/
+	background-image: url('../img/counter_front.png');
+	position: absolute;
+    background-size: cover;
+}
+
+
+@font-face {
+    font-family: 'digit';
+    src: url('../font/Digit.TTF');
+}
+
+@font-face{
+	font-family: 'November';
+    src: url('../font/Easy November.ttf');
+}
+
+@font-face{
+	font-family: 'GreatVibes';
+    src: url('../font/GreatVibes-Regular.ttf');
+}
