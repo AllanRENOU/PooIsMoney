@@ -19,5 +19,34 @@ var events = {
 				compteur.setValue(parseInt( totalArgent * 1000) );
 			
 			}, TEMPS_REFRESH * 1000 );
+	},
+
+	"header" : {
+		clickBtShare : function(){
+			console.error( "Fonction partager non implémentée" );
+		},
+
+		clickBtParam : function(){
+			showPopupParam();
+		}
+	},
+
+	"param" : {
+		"onInputSalaireChange" : function(){
+			SALAIRE = $( "#inputSalaire" ).val();
+			$( "#inputTauxHoraire" ).val( SALAIRE / 4 / HEURES_PAR_SEMAINE );
+		},
+		"onInputHeuresChange" : function(){
+			HEURES_PAR_SEMAINE = $( "#inputHeure" ).val();
+			$( "#inputTauxHoraire" ).val( SALAIRE / 4 / HEURES_PAR_SEMAINE );
+		},
+		"onInputTauxChange" : function(){
+			SALAIRE = HEURES_PAR_SEMAINE * 4 * parseFloat( $( "#inputTauxHoraire" ).val() );
+			$( "#inputSalaire" ).val( SALAIRE );
+		},
+
+		"clickBtValider" : function(){
+			hidePopupParam();
+		}
 	}
 }

@@ -7,8 +7,6 @@
 
 	<title>Poo is Money</title>
 
-	<!--<link rel="stylesheet" type="text/css" href="css/flipclock.css">-->
-	<!--<link rel="stylesheet" type="text/css" href="css/timeTo.css">-->
 
 	<link rel="stylesheet" href="css/jquery.countdown.timer.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -17,10 +15,6 @@
 	<script type="text/javascript" src="js/constantes.js"></script>
 	<script type="text/javascript" src="js/variables.js"></script>
 	<script type="text/javascript" src="js/jQuery.js"></script>
-	<!--<script type="text/javascript" src="js/flipclock.js"></script>-->
-	<!--<script type="text/javascript" src="js/jquery.time-to.js"></script>-->
-	<!--<script src="js/jquery.timeout.interval.idle.js" type="text/javascript"></script>
-	<script src="js/jquery.countdown.counter.js" type="text/javascript"></script>-->
 
 	<script type="text/javascript" src="js/compteur.js"></script>
 	<script type="text/javascript" src="js/natif.js"></script>
@@ -29,6 +23,11 @@
 </head>
 <body onload="events.init()">
 
+	<div id="header">
+		<div id="btParam" class="btHeader" onclick="events.header.clickBtParam()"><img src="img/settings.png" /></div>
+		<div id="btShare" class="btHeader" onclick="events.header.clickBtShare()"><img src="img/share.png" /></div>
+	</div>
+
 	<div id="timeCounterContainer">00:00:00</div>
 	<div id="moneyCounterContainer">
 		<img id="imgJackpot" src="img/jackpot.png"/>
@@ -36,5 +35,23 @@
 	</div>
 	<div id="logoContainer">Poo is money</div>
 
+	<div id="popupContainer">
+		<div id=popupParam>
+			
+			<table>
+				<tr>
+					<td class="label">Salaire Net : </td>
+					<td class="inputParam"><input type="number" id="inputSalaire" onchange="events.param.onInputSalaireChange()"/>€</td>
+				</tr>
+				<tr>
+					<td class="label">Nombre d'heures par semaines : </td>
+					<td class="inputParam"><input type="number" id="inputHeure" onchange="events.param.onInputHeuresChange()"/>H</td>
+				</tr>
+			</table>
+			<div>Ou</div>
+			<div>Taux horaire <input id="inputTauxHoraire" type="number" onchange="events.param.onInputTauxChange()"> €/H</div>
+			<div id="btValiderParam" onclick="events.param.clickBtValider()">Valider</div>
+		</div>
+	</div>
 </body>
 </html>

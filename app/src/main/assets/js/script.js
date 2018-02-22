@@ -1,3 +1,17 @@
+function showPopupParam(){
+	$( "#inputSalaire" ).val(SALAIRE);
+	$( "#inputHeure" ).val(HEURES_PAR_SEMAINE);
+	$( "#inputTauxHoraire" ).val( SALAIRE / 4 / HEURES_PAR_SEMAINE );
+
+
+	$( "#popupContainer, #popupParam" ).show();
+}
+
+function hidePopupParam(){
+	$( "#popupContainer, #popupParam" ).hide();
+}
+
+
 function refreshDuree(){
 	duree.seconde = duree.seconde + TEMPS_REFRESH;
 
@@ -10,5 +24,4 @@ function refreshDuree(){
 			duree.heure++;
 		}
 	}
-	
 }
